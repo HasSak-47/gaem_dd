@@ -35,7 +35,9 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 		animation_code = "jump"
-	if is_on_floor() and not direction:
+	
+	# should not be allowed to code at 0:37
+	if is_on_floor() and not direction and not animation_code == "jump":
 		animation_code = "idle"
 	print(animation_code)
 	sprite.play(animation_code)
