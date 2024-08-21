@@ -39,6 +39,5 @@ func _physics_process(delta: float) -> void:
 	# should not be allowed to code at 0:37
 	if is_on_floor() and not direction and not animation_code == "jump":
 		animation_code = "idle"
-	print(animation_code)
 	sprite.play(animation_code)
 	move_and_slide()
