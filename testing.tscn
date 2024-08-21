@@ -143,4 +143,5 @@ layer_0/tile_data = PackedInt32Array(-2555976, 0, 0, -2621512, 0, 0, -2490440, 0
 
 [node name="Character" parent="." instance=ExtResource("2_12le2")]
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="Character"]
+zoom = Vector2(2, 2)
