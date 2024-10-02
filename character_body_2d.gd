@@ -18,8 +18,10 @@ enum State{
 var state : State = State.Idle
 var attack : bool = true
 
+
 func update_state():
 	animation_tree["parameters/conditions/attack"] = attack
+
 	if velocity.y > 0:
 		animation_tree["parameters/movement/conditions/falling"] = true
 		animation_tree["parameters/movement/conditions/jumping"] = false
